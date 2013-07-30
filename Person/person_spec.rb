@@ -25,6 +25,12 @@ describe Person do
       it "returns the reverse name of a person" do 
         expect(person.reverse_name).to eq("kcuB ttaM")
       end
+
+     # describe "add_middle" do 
+     #   it returns full_name with middle name do 
+     #    expect(person.add_middle(middle_name)).to eq("Matt middle_name Buck")
+     #   end
+     # end
       
     end
   end   
@@ -44,7 +50,17 @@ describe Person do
         expect(person.full_name).to be_nil
       end
     end
-  end  
+  end 
+
+  context "when only a first or last name is provided" do
+    let ("person") { Person.new "Matt"}
+
+    describe "#full_name" do 
+      it "returns the provided name of the person" do 
+        expect(person.full_name).to eq("Matt")
+      end
+    end
+  end
 end
 
 

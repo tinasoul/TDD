@@ -12,6 +12,16 @@ class Person
   end
 
   def reverse_name
-    "#{first_name} #{last_name}".reverse
+    # "#{first_name} #{last_name}".reverse
+    full_name.reverse if first_name || last_name
   end
+
+  # def add_middle(middle_name)
+
+    # "#{first_name} #{middle_name} #{last_name}"
+    # first_name + " " + middle_name + " " + last_name
+  # end
+
+
+
 end
